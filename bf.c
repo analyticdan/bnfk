@@ -54,7 +54,7 @@ int main (int argc, char **argv) {
   	switch (c) {
   	  case '>':
   	  	/* Create next cell if it doesn't exist. */
-  	  	if (data->next == NULL) {
+  	    if (data->next == NULL) {
   	      nextcell = malloc (sizeof (cell));
 	      if (nextcell == NULL) {
 	        perror ("Error mallocing");
@@ -108,8 +108,8 @@ int main (int argc, char **argv) {
   	  	break;
   	  case ']':
   	  	if (loop->offset == 0) {
-  	  		perror("Mismatched loop end");
-  	  		return -1;
+  	  	  perror("Mismatched loop end");
+  	  	  return -1;
   	  	} else if (data->value == 0) {
   	  	  /* Continue if current cell has value 0. */
   	  	  loop = loop->prev;
@@ -127,12 +127,12 @@ int main (int argc, char **argv) {
   }
 
   if (!feof (file)) {
-  	perror ("Error reading file");
-  	return -1;
+    perror ("Error reading file");
+    return -1;
   } else if (loop != labels_head) {
-  	perror ("Mismatched loop operators");
-  	return -1;
+    perror ("Mismatched loop operators");
+    return -1;
   } else {
-  	return 0;
+    return 0;
   }
 }
