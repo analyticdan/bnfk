@@ -1,4 +1,4 @@
-# bf
+# bfnk
 This repo contains an interpreter and a compiler for the esoteric programming language Brainf\*ck, both written in C. The compiler compiles BF files to C files.
 
 Currently, neither the interpreter nor the compiler perform any semantic checks. It can only interpret or compile valid BF programs.
